@@ -123,7 +123,7 @@ export interface VehicleParametersAtWaypoint {
      *  Preferred routes for long trucks in the Netherlands, also known as LZV (Langere en Zwaardere Vrachtautocombinatie).
      *  * `SE_BK_1`
      *  Public roads and bridges that support up to 64 t total permitted weight (Swedish Transport Administration).
-     *  * `SE_BK_1`
+     *  * `SE_BK_2`
      *  Public roads and bridges that support up to 51.4 t total permitted weight.
      *  Actual limit depends on wheelbase and axle weight (Swedish Transport Administration).
      *  * `SE_BK_3`

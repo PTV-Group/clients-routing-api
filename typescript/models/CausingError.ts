@@ -65,7 +65,7 @@ export interface CausingError {
      * * `ROUTING_EMISSIONS_MUTUALLY_EXCLUSIVE` - All emissions EN16258_2012 results and ISO14083_2022 results are mutually exclusive.
      *   * `attribute` - The first conflicting emissions standard.
      *   * `conflictingAttributes` - The list of other conflicting emissions standards.
-     * * `ROUTING_START_AND_ARRIVAL_TIME_MUTUALLY_EXCLUSIVE` - startTime and arrivalTime are mutually exclusive. - _The **parameter** remains empty._
+     * * `ROUTING_START_AND_ARRIVAL_TIME_MUTUALLY_EXCLUSIVE` - **options[startTime]** and **options[arrivalTime]** are mutually exclusive. - _The **parameter** remains empty._
      * * `ROUTING_ESTIMATED_DISTANCE_TOO_LONG` - The distance of the route (estimated by air-line) for non-motorized vehicles is too long. - _The **parameter** remains empty._
      *   * `distance` - The estimated distance (integer).
      *   * `limit` - The maximum allowable distance (integer).
@@ -109,9 +109,11 @@ export interface CausingError {
      *   * `value` - The invalid parameter value.
      *   * `polylineIndex` - The index denoting the polyline in which the error was found.
      *   * `coordinateIndex` - The index denoting the erroneous coordinate within the polyline.
-     * * `ROUTING_FEATURE_NOT_SUPPORTED_WITH_MONETARY_COSTS` - The requested feature is not supported when **options[routingMode] is _MONETARY_**.
+     * * `ROUTING_FEATURE_NOT_SUPPORTED_WITH_MONETARY_COSTS` - The requested feature is not supported when **options[routingMode]** is _MONETARY_.
      *   * `value` - The invalid parameter value.
-     * * `ROUTING_MUST_HAVE_MONETARY_COST_VALUE` - Both values monetaryCostOptions[costPerKilometer] and monetaryCostOptions[workingCostPerHour] are zero. Use a value greater zero for at least one of this monetaryCostOptions parameters.
+     * * `ROUTING_MUST_HAVE_MONETARY_COST_VALUE` - Both values **monetaryCostOptions[costPerKilometer]** and **monetaryCostOptions[workingCostPerHour]** are zero. Use a value greater than zero for at least one of these **monetaryCostOptions** parameters.
+     * * `ROUTING_CONFLICTING_LOW_EMISSION_ZONE_TYPES` - Some requested low-emission zone types are in conflict with each other, specify only one of them.
+     *   * `values` - The values which are in conflict with each other.
      * 
      * **Error codes for** `ROUTING_ERROR`
      * 

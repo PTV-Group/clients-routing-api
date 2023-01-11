@@ -157,7 +157,7 @@ export interface Vehicle {
     emissionStandard?: EmissionStandard | null;
     /**
      * Comma-separated list of the low-emission zone types of the vehicle.
-     * For now, types are available only for Germany, so using more than one value is not meaningful.
+     * For now, types are available only for Germany, so using more than one value is not allowed.
      * 
      * Relevant for `routing`.
      * @type {Array<LowEmissionZoneTypes>}
@@ -274,7 +274,7 @@ export interface Vehicle {
      *  Preferred routes for long trucks in the Netherlands, also known as LZV (Langere en Zwaardere Vrachtautocombinatie).
      *  * `SE_BK_1`
      *  Public roads and bridges that support up to 64 t total permitted weight (Swedish Transport Administration).
-     *  * `SE_BK_1`
+     *  * `SE_BK_2`
      *  Public roads and bridges that support up to 51.4 t total permitted weight.
      *  Actual limit depends on wheelbase and axle weight (Swedish Transport Administration).
      *  * `SE_BK_3`
