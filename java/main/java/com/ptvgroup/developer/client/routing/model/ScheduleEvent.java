@@ -38,7 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ScheduleEvent.JSON_PROPERTY_DURATION,
   ScheduleEvent.JSON_PROPERTY_SCHEDULE_TYPES
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-16T16:11:36.609539Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-11T11:43:48.792943Z[Etc/UTC]")
 public class ScheduleEvent {
   public static final String JSON_PROPERTY_DURATION = "duration";
   private Integer duration;
