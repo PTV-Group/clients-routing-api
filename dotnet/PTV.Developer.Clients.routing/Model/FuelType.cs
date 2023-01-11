@@ -26,9 +26,9 @@ using OpenAPIDateConverter = PTV.Developer.Clients.routing.Client.OpenAPIDateCon
 namespace PTV.Developer.Clients.routing.Model
 {
     /// <summary>
-    /// The fuel type of the vehicle. The fuel types _CNG_GAOLINE_ and _LNG_GASOLINE_ are used for dual-fuel vehicles, therefore the **dualFuelRatio** has to be specified. These fuel types cannot be used with hybrid vehicles.  Supported for **engineType** _COMBUSTION_ and _HYBRID_. Relevant for &#x60;emissions&#x60;. 
+    /// The fuel type of the vehicle. The fuel types _CNG_GASOLINE_ and _LNG_GASOLINE_ are used for dual-fuel vehicles, therefore the **dualFuelRatio** has to be specified. These fuel types cannot be used with hybrid vehicles.  Supported for **engineType** _COMBUSTION_ and _HYBRID_. Relevant for &#x60;emissions&#x60;. 
     /// </summary>
-    /// <value>The fuel type of the vehicle. The fuel types _CNG_GAOLINE_ and _LNG_GASOLINE_ are used for dual-fuel vehicles, therefore the **dualFuelRatio** has to be specified. These fuel types cannot be used with hybrid vehicles.  Supported for **engineType** _COMBUSTION_ and _HYBRID_. Relevant for &#x60;emissions&#x60;. </value>
+    /// <value>The fuel type of the vehicle. The fuel types _CNG_GASOLINE_ and _LNG_GASOLINE_ are used for dual-fuel vehicles, therefore the **dualFuelRatio** has to be specified. These fuel types cannot be used with hybrid vehicles.  Supported for **engineType** _COMBUSTION_ and _HYBRID_. Relevant for &#x60;emissions&#x60;. </value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FuelType
     {
