@@ -38,7 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   TollEvent.JSON_PROPERTY_ACCESS_TYPE,
   TollEvent.JSON_PROPERTY_RELATED_EVENT_INDEX
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T07:57:01.625851Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:40:53.466844Z[Etc/UTC]")
 public class TollEvent {
   public static final String JSON_PROPERTY_SECTION_INDEX = "sectionIndex";
   private Integer sectionIndex;

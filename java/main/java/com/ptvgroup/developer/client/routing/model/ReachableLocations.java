@@ -40,7 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ReachableLocations.JSON_PROPERTY_UNREACHABLE,
   ReachableLocations.JSON_PROPERTY_WARNINGS
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T07:57:01.625851Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:40:53.466844Z[Etc/UTC]")
 public class ReachableLocations {
   public static final String JSON_PROPERTY_REACHABLE = "reachable";
   private List<ReachableLocation> reachable = null;
