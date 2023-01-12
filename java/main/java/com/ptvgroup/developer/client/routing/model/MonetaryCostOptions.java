@@ -40,7 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   MonetaryCostOptions.JSON_PROPERTY_COST_PER_KWH,
   MonetaryCostOptions.JSON_PROPERTY_COST_PER_FUEL_UNIT
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:40:53.466844Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:51:18.360334Z[Etc/UTC]")
 public class MonetaryCostOptions {
   public static final String JSON_PROPERTY_COST_PER_KILOMETER = "costPerKilometer";
   private JsonNullable<Double> costPerKilometer = JsonNullable.<Double>undefined();

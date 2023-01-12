@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ExchangeRate.JSON_PROPERTY_CURRENCY,
   ExchangeRate.JSON_PROPERTY_RATE
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:40:53.466844Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:51:18.360334Z[Etc/UTC]")
 public class ExchangeRate {
   public static final String JSON_PROPERTY_CURRENCY = "currency";
   private String currency;

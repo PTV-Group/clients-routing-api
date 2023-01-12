@@ -58,7 +58,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   RouteResponse.JSON_PROPERTY_MONETARY_COSTS,
   RouteResponse.JSON_PROPERTY_WARNINGS
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:40:53.466844Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:51:18.360334Z[Etc/UTC]")
 public class RouteResponse {
   public static final String JSON_PROPERTY_DISTANCE = "distance";
   private Integer distance;
