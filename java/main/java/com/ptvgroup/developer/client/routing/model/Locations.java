@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
   Locations.JSON_PROPERTY_LOCATIONS
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-11T11:43:48.792943Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T07:57:01.625851Z[Etc/UTC]")
 public class Locations {
   public static final String JSON_PROPERTY_LOCATIONS = "locations";
   private List<Location> locations = new ArrayList<>();
