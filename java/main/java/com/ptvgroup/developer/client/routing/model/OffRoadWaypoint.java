@@ -45,7 +45,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   OffRoadWaypoint.JSON_PROPERTY_OPENING_INTERVALS,
   OffRoadWaypoint.JSON_PROPERTY_VEHICLE_PARAMETERS
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:51:18.360334Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-19T13:13:56.057859Z[Etc/UTC]")
 public class OffRoadWaypoint {
   public static final String JSON_PROPERTY_LATITUDE = "latitude";
   private Double latitude;

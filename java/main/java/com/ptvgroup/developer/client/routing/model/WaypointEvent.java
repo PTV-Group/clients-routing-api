@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   WaypointEvent.JSON_PROPERTY_INDEX,
   WaypointEvent.JSON_PROPERTY_NAME
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:51:18.360334Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-19T13:13:56.057859Z[Etc/UTC]")
 public class WaypointEvent {
   public static final String JSON_PROPERTY_INDEX = "index";
   private Integer index;

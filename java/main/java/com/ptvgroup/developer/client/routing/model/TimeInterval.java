@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   TimeInterval.JSON_PROPERTY_START,
   TimeInterval.JSON_PROPERTY_END
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:51:18.360334Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-19T13:13:56.057859Z[Etc/UTC]")
 public class TimeInterval {
   public static final String JSON_PROPERTY_START = "start";
   private OffsetDateTime start;

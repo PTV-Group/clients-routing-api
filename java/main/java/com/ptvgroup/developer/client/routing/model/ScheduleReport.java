@@ -41,7 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ScheduleReport.JSON_PROPERTY_BREAK_TIME,
   ScheduleReport.JSON_PROPERTY_REST_TIME
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:51:18.360334Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-19T13:13:56.057859Z[Etc/UTC]")
 public class ScheduleReport {
   public static final String JSON_PROPERTY_START_TIME = "startTime";
   private OffsetDateTime startTime;

@@ -39,7 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   MonetaryCosts.JSON_PROPERTY_ENERGY_COST,
   MonetaryCosts.JSON_PROPERTY_TOLL_COST
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:51:18.360334Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-19T13:13:56.057859Z[Etc/UTC]")
 public class MonetaryCosts {
   public static final String JSON_PROPERTY_CURRENCY = "currency";
   private String currency;

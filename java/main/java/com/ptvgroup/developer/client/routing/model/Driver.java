@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
   Driver.JSON_PROPERTY_WORKING_HOURS_PRESET
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:51:18.360334Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-19T13:13:56.057859Z[Etc/UTC]")
 public class Driver {
   public static final String JSON_PROPERTY_WORKING_HOURS_PRESET = "workingHoursPreset";
   private WorkingHoursPreset workingHoursPreset;

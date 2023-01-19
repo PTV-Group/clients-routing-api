@@ -39,7 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Emissions.JSON_PROPERTY_ISO140832022,
   Emissions.JSON_PROPERTY_FRENCH_C_O2E_DECREE2017639
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:51:18.360334Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-19T13:13:56.057859Z[Etc/UTC]")
 public class Emissions {
   public static final String JSON_PROPERTY_EN162582012 = "en16258_2012";
   private EmissionsEN162582012 en162582012;

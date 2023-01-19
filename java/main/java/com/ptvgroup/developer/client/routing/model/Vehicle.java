@@ -75,7 +75,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Vehicle.JSON_PROPERTY_COMMERCIAL,
   Vehicle.JSON_PROPERTY_ETC_SUBSCRIPTIONS
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T09:51:18.360334Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-19T13:13:56.057859Z[Etc/UTC]")
 public class Vehicle {
   public static final String JSON_PROPERTY_ENGINE_TYPE = "engineType";
   private JsonNullable<EngineType> engineType = JsonNullable.<EngineType>undefined();
