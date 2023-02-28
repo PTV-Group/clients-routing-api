@@ -37,7 +37,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   TollSystem.JSON_PROPERTY_TARIFF_VERSION,
   TollSystem.JSON_PROPERTY_TARIFF_VERSION_VALID_FROM
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-16T08:31:15.017608Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:23:48.569348Z[Etc/UTC]")
 public class TollSystem {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;

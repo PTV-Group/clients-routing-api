@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Location.JSON_PROPERTY_LATITUDE,
   Location.JSON_PROPERTY_LONGITUDE
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-16T08:31:15.017608Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:23:48.569348Z[Etc/UTC]")
 public class Location {
   public static final String JSON_PROPERTY_LATITUDE = "latitude";
   private Double latitude;
