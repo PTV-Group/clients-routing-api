@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   RoadAhead.JSON_PROPERTY_NAME,
   RoadAhead.JSON_PROPERTY_NUMBER
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:23:48.569348Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
 public class RoadAhead {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;

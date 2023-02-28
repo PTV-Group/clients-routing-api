@@ -55,7 +55,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Options.JSON_PROPERTY_BLOCK_INTERSECTING_ROADS,
   Options.JSON_PROPERTY_ROUTING_MODE
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:23:48.569348Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
 public class Options {
   public static final String JSON_PROPERTY_START_TIME = "startTime";
   private JsonNullable<OffsetDateTime> startTime = JsonNullable.<OffsetDateTime>undefined();

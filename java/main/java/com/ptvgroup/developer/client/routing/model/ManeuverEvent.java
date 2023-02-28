@@ -48,7 +48,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ManeuverEvent.JSON_PROPERTY_COMBINED_TRANSPORT_TYPE,
   ManeuverEvent.JSON_PROPERTY_CROSSING_ROAD_NAME
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:23:48.569348Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
 public class ManeuverEvent {
   public static final String JSON_PROPERTY_TYPE = "type";
   private ManeuverType type;
