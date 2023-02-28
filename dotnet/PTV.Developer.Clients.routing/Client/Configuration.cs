@@ -115,7 +115,7 @@ namespace PTV.Developer.Clients.routing.Client
         {
             Proxy = null;
             UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/1.0.0/csharp");
-            BasePath = "https://api.staging.myptv.com/routing/v1";
+            BasePath = "https://api.myptv.com/routing/v1";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
@@ -123,7 +123,7 @@ namespace PTV.Developer.Clients.routing.Client
             {
                 {
                     new Dictionary<string, object> {
-                        {"url", "https://api.staging.myptv.com/routing/v1"},
+                        {"url", "https://api.myptv.com/routing/v1"},
                         {"description", "No description provided"},
                     }
                 }
@@ -144,7 +144,7 @@ namespace PTV.Developer.Clients.routing.Client
             IDictionary<string, string> defaultHeaders,
             IDictionary<string, string> apiKey,
             IDictionary<string, string> apiKeyPrefix,
-            string basePath = "https://api.staging.myptv.com/routing/v1") : this()
+            string basePath = "https://api.myptv.com/routing/v1") : this()
         {
             if (string.IsNullOrWhiteSpace(basePath))
                 throw new ArgumentException("The provided basePath is invalid.", "basePath");
