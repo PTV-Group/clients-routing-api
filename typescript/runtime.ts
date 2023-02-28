@@ -13,7 +13,7 @@
  */
 
 
-export const BASE_PATH = "https://api.myptv.com/routing/v1".replace(/\/+$/, "");
+export const BASE_PATH = "https://api.staging.myptv.com/routing/v1".replace(/\/+$/, "");
 
 export interface ConfigurationParameters {
     basePath?: string; // override base path
