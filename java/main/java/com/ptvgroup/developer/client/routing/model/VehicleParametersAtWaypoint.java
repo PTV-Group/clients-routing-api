@@ -52,7 +52,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   VehicleParametersAtWaypoint.JSON_PROPERTY_TUNNEL_RESTRICTION_CODE,
   VehicleParametersAtWaypoint.JSON_PROPERTY_TRUCK_ROUTES
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T09:48:51.311424Z[Etc/UTC]")
 public class VehicleParametersAtWaypoint {
   public static final String JSON_PROPERTY_AVERAGE_FUEL_CONSUMPTION = "averageFuelConsumption";
   private JsonNullable<Double> averageFuelConsumption = JsonNullable.<Double>undefined();

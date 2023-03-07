@@ -64,7 +64,7 @@ Language depending information:
    ```
 
 
-* **TypeScript:** Please add the following dependecies to your project
+* **TypeScript:** Please add the following dependencies to your project
   * nodeVersion (18.14.0)
   * aurelia-api (3.2.1)
   * aurelia-fetch-client (1.8.2)

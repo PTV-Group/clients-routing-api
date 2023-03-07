@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
   UTCOffsetChangeEvent.JSON_PROPERTY_UTC_OFFSET
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T09:48:51.311424Z[Etc/UTC]")
 public class UTCOffsetChangeEvent {
   public static final String JSON_PROPERTY_UTC_OFFSET = "utcOffset";
   private Integer utcOffset;

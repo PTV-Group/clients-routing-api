@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   EmissionsFrenchCO2eDecree2017639.JSON_PROPERTY_CO2E_WELL_TO_WHEEL,
   EmissionsFrenchCO2eDecree2017639.JSON_PROPERTY_CO2E_TANK_TO_WHEEL
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T09:48:51.311424Z[Etc/UTC]")
 public class EmissionsFrenchCO2eDecree2017639 {
   public static final String JSON_PROPERTY_CO2E_WELL_TO_WHEEL = "co2eWellToWheel";
   private Double co2eWellToWheel;

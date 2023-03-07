@@ -38,7 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   RouteRequest.JSON_PROPERTY_WAYPOINTS,
   RouteRequest.JSON_PROPERTY_ROUTE_ID
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T09:48:51.311424Z[Etc/UTC]")
 public class RouteRequest {
   public static final String JSON_PROPERTY_WAYPOINTS = "waypoints";
   private List<Waypoint> waypoints = null;

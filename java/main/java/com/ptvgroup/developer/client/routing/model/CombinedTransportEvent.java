@@ -39,7 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   CombinedTransportEvent.JSON_PROPERTY_ACCESS_TYPE,
   CombinedTransportEvent.JSON_PROPERTY_RELATED_EVENT_INDEX
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T09:48:51.311424Z[Etc/UTC]")
 public class CombinedTransportEvent {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;

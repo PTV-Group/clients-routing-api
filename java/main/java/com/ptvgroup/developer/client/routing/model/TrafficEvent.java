@@ -40,7 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   TrafficEvent.JSON_PROPERTY_RELATED_EVENT_INDEX,
   TrafficEvent.JSON_PROPERTY_POLYLINE
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T09:48:51.311424Z[Etc/UTC]")
 public class TrafficEvent {
   public static final String JSON_PROPERTY_DELAY = "delay";
   private Integer delay;

@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ManipulateRouteWaypoint.JSON_PROPERTY_LONGITUDE,
   ManipulateRouteWaypoint.JSON_PROPERTY_RADIUS
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T09:48:51.311424Z[Etc/UTC]")
 public class ManipulateRouteWaypoint {
   public static final String JSON_PROPERTY_LATITUDE = "latitude";
   private Double latitude;

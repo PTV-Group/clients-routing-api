@@ -38,7 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   EmissionsEN162582012.JSON_PROPERTY_ENERGY_USE_TANK_TO_WHEEL,
   EmissionsEN162582012.JSON_PROPERTY_ENERGY_USE_WELL_TO_WHEEL
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T09:48:51.311424Z[Etc/UTC]")
 public class EmissionsEN162582012 {
   public static final String JSON_PROPERTY_FUEL_CONSUMPTION = "fuelConsumption";
   private Double fuelConsumption;

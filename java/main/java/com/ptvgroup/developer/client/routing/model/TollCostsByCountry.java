@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   TollCostsByCountry.JSON_PROPERTY_PRICE,
   TollCostsByCountry.JSON_PROPERTY_CONVERTED_PRICE
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-28T07:47:51.246976Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T09:48:51.311424Z[Etc/UTC]")
 public class TollCostsByCountry {
   public static final String JSON_PROPERTY_COUNTRY_CODE = "countryCode";
   private String countryCode;
