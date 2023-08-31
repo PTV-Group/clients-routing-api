@@ -28,19 +28,19 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 /**
- * Emissions according to the draft version of ISO 14083:2023.
+ * Emissions according to ISO 14083:2023 (a.k.a. ISO standard).
  */
-@ApiModel(description = "Emissions according to the draft version of ISO 14083:2023.")
+@ApiModel(description = "Emissions according to ISO 14083:2023 (a.k.a. ISO standard).")
 @JsonPropertyOrder({
-  EmissionsISO140832022.JSON_PROPERTY_FUEL_CONSUMPTION,
-  EmissionsISO140832022.JSON_PROPERTY_ELECTRICITY_CONSUMPTION,
-  EmissionsISO140832022.JSON_PROPERTY_CO2E_TANK_TO_WHEEL,
-  EmissionsISO140832022.JSON_PROPERTY_CO2E_WELL_TO_WHEEL,
-  EmissionsISO140832022.JSON_PROPERTY_ENERGY_USE_TANK_TO_WHEEL,
-  EmissionsISO140832022.JSON_PROPERTY_ENERGY_USE_WELL_TO_WHEEL
+  EmissionsISO140832023.JSON_PROPERTY_FUEL_CONSUMPTION,
+  EmissionsISO140832023.JSON_PROPERTY_ELECTRICITY_CONSUMPTION,
+  EmissionsISO140832023.JSON_PROPERTY_CO2E_TANK_TO_WHEEL,
+  EmissionsISO140832023.JSON_PROPERTY_CO2E_WELL_TO_WHEEL,
+  EmissionsISO140832023.JSON_PROPERTY_ENERGY_USE_TANK_TO_WHEEL,
+  EmissionsISO140832023.JSON_PROPERTY_ENERGY_USE_WELL_TO_WHEEL
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-31T08:11:59.671519Z[Etc/UTC]")
-public class EmissionsISO140832022 {
+public class EmissionsISO140832023 {
   public static final String JSON_PROPERTY_FUEL_CONSUMPTION = "fuelConsumption";
   private Double fuelConsumption;
 
@@ -59,10 +59,10 @@ public class EmissionsISO140832022 {
   public static final String JSON_PROPERTY_ENERGY_USE_WELL_TO_WHEEL = "energyUseWellToWheel";
   private Double energyUseWellToWheel;
 
-  public EmissionsISO140832022() { 
+  public EmissionsISO140832023() { 
   }
 
-  public EmissionsISO140832022 fuelConsumption(Double fuelConsumption) {
+  public EmissionsISO140832023 fuelConsumption(Double fuelConsumption) {
     this.fuelConsumption = fuelConsumption;
     return this;
   }
@@ -89,7 +89,7 @@ public class EmissionsISO140832022 {
   }
 
 
-  public EmissionsISO140832022 electricityConsumption(Double electricityConsumption) {
+  public EmissionsISO140832023 electricityConsumption(Double electricityConsumption) {
     this.electricityConsumption = electricityConsumption;
     return this;
   }
@@ -116,7 +116,7 @@ public class EmissionsISO140832022 {
   }
 
 
-  public EmissionsISO140832022 co2eTankToWheel(Double co2eTankToWheel) {
+  public EmissionsISO140832023 co2eTankToWheel(Double co2eTankToWheel) {
     this.co2eTankToWheel = co2eTankToWheel;
     return this;
   }
@@ -143,7 +143,7 @@ public class EmissionsISO140832022 {
   }
 
 
-  public EmissionsISO140832022 co2eWellToWheel(Double co2eWellToWheel) {
+  public EmissionsISO140832023 co2eWellToWheel(Double co2eWellToWheel) {
     this.co2eWellToWheel = co2eWellToWheel;
     return this;
   }
@@ -170,7 +170,7 @@ public class EmissionsISO140832022 {
   }
 
 
-  public EmissionsISO140832022 energyUseTankToWheel(Double energyUseTankToWheel) {
+  public EmissionsISO140832023 energyUseTankToWheel(Double energyUseTankToWheel) {
     this.energyUseTankToWheel = energyUseTankToWheel;
     return this;
   }
@@ -197,7 +197,7 @@ public class EmissionsISO140832022 {
   }
 
 
-  public EmissionsISO140832022 energyUseWellToWheel(Double energyUseWellToWheel) {
+  public EmissionsISO140832023 energyUseWellToWheel(Double energyUseWellToWheel) {
     this.energyUseWellToWheel = energyUseWellToWheel;
     return this;
   }
@@ -225,7 +225,7 @@ public class EmissionsISO140832022 {
 
 
   /**
-   * Return true if this Emissions_ISO14083_2022 object is equal to o.
+   * Return true if this Emissions_ISO14083_2023 object is equal to o.
    */
   @Override
   public boolean equals(Object o) {
@@ -235,13 +235,13 @@ public class EmissionsISO140832022 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EmissionsISO140832022 emissionsISO140832022 = (EmissionsISO140832022) o;
-    return Objects.equals(this.fuelConsumption, emissionsISO140832022.fuelConsumption) &&
-        Objects.equals(this.electricityConsumption, emissionsISO140832022.electricityConsumption) &&
-        Objects.equals(this.co2eTankToWheel, emissionsISO140832022.co2eTankToWheel) &&
-        Objects.equals(this.co2eWellToWheel, emissionsISO140832022.co2eWellToWheel) &&
-        Objects.equals(this.energyUseTankToWheel, emissionsISO140832022.energyUseTankToWheel) &&
-        Objects.equals(this.energyUseWellToWheel, emissionsISO140832022.energyUseWellToWheel);
+    EmissionsISO140832023 emissionsISO140832023 = (EmissionsISO140832023) o;
+    return Objects.equals(this.fuelConsumption, emissionsISO140832023.fuelConsumption) &&
+        Objects.equals(this.electricityConsumption, emissionsISO140832023.electricityConsumption) &&
+        Objects.equals(this.co2eTankToWheel, emissionsISO140832023.co2eTankToWheel) &&
+        Objects.equals(this.co2eWellToWheel, emissionsISO140832023.co2eWellToWheel) &&
+        Objects.equals(this.energyUseTankToWheel, emissionsISO140832023.energyUseTankToWheel) &&
+        Objects.equals(this.energyUseWellToWheel, emissionsISO140832023.energyUseWellToWheel);
   }
 
   @Override
@@ -252,7 +252,7 @@ public class EmissionsISO140832022 {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EmissionsISO140832022 {\n");
+    sb.append("class EmissionsISO140832023 {\n");
     sb.append("    fuelConsumption: ").append(toIndentedString(fuelConsumption)).append("\n");
     sb.append("    electricityConsumption: ").append(toIndentedString(electricityConsumption)).append("\n");
     sb.append("    co2eTankToWheel: ").append(toIndentedString(co2eTankToWheel)).append("\n");

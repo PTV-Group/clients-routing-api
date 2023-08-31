@@ -22,85 +22,85 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.ptvgroup.developer.client.routing.model.WorkLogbook;
+import com.ptvgroup.developer.client.routing.model.WorkingHoursPreset;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 /**
- * Issued when a waypoint is reached by the route, but not for route-manipulation waypoints. Requires _WAYPOINT_EVENTS_ to be requested.
+ * DriverBody
  */
-@ApiModel(description = "Issued when a waypoint is reached by the route, but not for route-manipulation waypoints. Requires _WAYPOINT_EVENTS_ to be requested.")
 @JsonPropertyOrder({
-  WaypointEvent.JSON_PROPERTY_INDEX,
-  WaypointEvent.JSON_PROPERTY_NAME
+  DriverBody.JSON_PROPERTY_WORKING_HOURS_PRESET,
+  DriverBody.JSON_PROPERTY_WORK_LOGBOOK
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-31T08:11:59.671519Z[Etc/UTC]")
-public class WaypointEvent {
-  public static final String JSON_PROPERTY_INDEX = "index";
-  private Integer index;
+public class DriverBody {
+  public static final String JSON_PROPERTY_WORKING_HOURS_PRESET = "workingHoursPreset";
+  private WorkingHoursPreset workingHoursPreset;
 
-  public static final String JSON_PROPERTY_NAME = "name";
-  private String name;
+  public static final String JSON_PROPERTY_WORK_LOGBOOK = "workLogbook";
+  private WorkLogbook workLogbook;
 
-  public WaypointEvent() { 
+  public DriverBody() { 
   }
 
-  public WaypointEvent index(Integer index) {
-    this.index = index;
+  public DriverBody workingHoursPreset(WorkingHoursPreset workingHoursPreset) {
+    this.workingHoursPreset = workingHoursPreset;
     return this;
   }
 
    /**
-   * The index of the waypoint in the request.
-   * minimum: 0
-   * @return index
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The index of the waypoint in the request.")
-  @JsonProperty(JSON_PROPERTY_INDEX)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
-
-  public Integer getIndex() {
-    return index;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_INDEX)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setIndex(Integer index) {
-    this.index = index;
-  }
-
-
-  public WaypointEvent name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * The name of the waypoint as given in the request. This field is only present if it is not empty.
-   * @return name
+   * Get workingHoursPreset
+   * @return workingHoursPreset
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the waypoint as given in the request. This field is only present if it is not empty.")
-  @JsonProperty(JSON_PROPERTY_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @ApiModelProperty(required = true, value = "")
+  @JsonProperty(JSON_PROPERTY_WORKING_HOURS_PRESET)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public String getName() {
-    return name;
+  public WorkingHoursPreset getWorkingHoursPreset() {
+    return workingHoursPreset;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonProperty(JSON_PROPERTY_WORKING_HOURS_PRESET)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  public void setWorkingHoursPreset(WorkingHoursPreset workingHoursPreset) {
+    this.workingHoursPreset = workingHoursPreset;
+  }
+
+
+  public DriverBody workLogbook(WorkLogbook workLogbook) {
+    this.workLogbook = workLogbook;
+    return this;
+  }
+
+   /**
+   * Get workLogbook
+   * @return workLogbook
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_WORK_LOGBOOK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setName(String name) {
-    this.name = name;
+
+  public WorkLogbook getWorkLogbook() {
+    return workLogbook;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_WORK_LOGBOOK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setWorkLogbook(WorkLogbook workLogbook) {
+    this.workLogbook = workLogbook;
   }
 
 
   /**
-   * Return true if this WaypointEvent object is equal to o.
+   * Return true if this DriverBody object is equal to o.
    */
   @Override
   public boolean equals(Object o) {
@@ -110,22 +110,22 @@ public class WaypointEvent {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    WaypointEvent waypointEvent = (WaypointEvent) o;
-    return Objects.equals(this.index, waypointEvent.index) &&
-        Objects.equals(this.name, waypointEvent.name);
+    DriverBody driverBody = (DriverBody) o;
+    return Objects.equals(this.workingHoursPreset, driverBody.workingHoursPreset) &&
+        Objects.equals(this.workLogbook, driverBody.workLogbook);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(index, name);
+    return Objects.hash(workingHoursPreset, workLogbook);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class WaypointEvent {\n");
-    sb.append("    index: ").append(toIndentedString(index)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("class DriverBody {\n");
+    sb.append("    workingHoursPreset: ").append(toIndentedString(workingHoursPreset)).append("\n");
+    sb.append("    workLogbook: ").append(toIndentedString(workLogbook)).append("\n");
     sb.append("}");
     return sb.toString();
   }
