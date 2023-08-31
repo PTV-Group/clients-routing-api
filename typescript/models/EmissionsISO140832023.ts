@@ -14,53 +14,53 @@
 
 import { exists, mapValues } from '../runtime';
 /**
- * Emissions according to the draft version of ISO 14083:2023.
+ * Emissions according to ISO 14083:2023 (a.k.a. ISO standard).
  * @export
- * @interface EmissionsISO140832022
+ * @interface EmissionsISO140832023
  */
-export interface EmissionsISO140832022 {
+export interface EmissionsISO140832023 {
     /**
      * The total conventional fuel consumption [kg].
      * @type {number}
-     * @memberof EmissionsISO140832022
+     * @memberof EmissionsISO140832023
      */
     fuelConsumption: number;
     /**
      * The total electric power consumption of the vehicle if the **engineType** is _ELECTRIC_ or _HYBRID_ [kWh].
      * @type {number}
-     * @memberof EmissionsISO140832022
+     * @memberof EmissionsISO140832023
      */
     electricityConsumption: number;
     /**
      * The amount of emitted CO2e from tank to wheel [kg].
      * @type {number}
-     * @memberof EmissionsISO140832022
+     * @memberof EmissionsISO140832023
      */
     co2eTankToWheel: number;
     /**
      * The amount of emitted CO2e from well to wheel [kg].
      * @type {number}
-     * @memberof EmissionsISO140832022
+     * @memberof EmissionsISO140832023
      */
     co2eWellToWheel: number;
     /**
      * The tank-to-wheel energy use [MJ].
      * @type {number}
-     * @memberof EmissionsISO140832022
+     * @memberof EmissionsISO140832023
      */
     energyUseTankToWheel: number;
     /**
      * The well-to-wheel energy use [MJ].
      * @type {number}
-     * @memberof EmissionsISO140832022
+     * @memberof EmissionsISO140832023
      */
     energyUseWellToWheel: number;
 }
 
 /**
- * Check if a given object implements the EmissionsISO140832022 interface.
+ * Check if a given object implements the EmissionsISO140832023 interface.
  */
-export function instanceOfEmissionsISO140832022(value: object): boolean {
+export function instanceOfEmissionsISO140832023(value: object): boolean {
     let isInstance = true;
     isInstance = isInstance && "fuelConsumption" in value;
     isInstance = isInstance && "electricityConsumption" in value;
@@ -72,11 +72,11 @@ export function instanceOfEmissionsISO140832022(value: object): boolean {
     return isInstance;
 }
 
-export function EmissionsISO140832022FromJSON(json: any): EmissionsISO140832022 {
-    return EmissionsISO140832022FromJSONTyped(json, false);
+export function EmissionsISO140832023FromJSON(json: any): EmissionsISO140832023 {
+    return EmissionsISO140832023FromJSONTyped(json, false);
 }
 
-export function EmissionsISO140832022FromJSONTyped(json: any, ignoreDiscriminator: boolean): EmissionsISO140832022 {
+export function EmissionsISO140832023FromJSONTyped(json: any, ignoreDiscriminator: boolean): EmissionsISO140832023 {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -91,7 +91,7 @@ export function EmissionsISO140832022FromJSONTyped(json: any, ignoreDiscriminato
     };
 }
 
-export function EmissionsISO140832022ToJSON(value?: EmissionsISO140832022 | null): any {
+export function EmissionsISO140832023ToJSON(value?: EmissionsISO140832023 | null): any {
     if (value === undefined) {
         return undefined;
     }

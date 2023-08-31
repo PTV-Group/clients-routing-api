@@ -13,6 +13,12 @@
  */
 
 import { exists, mapValues } from '../runtime';
+import type { WorkLogbook } from './WorkLogbook';
+import {
+    WorkLogbookFromJSON,
+    WorkLogbookFromJSONTyped,
+    WorkLogbookToJSON,
+} from './WorkLogbook';
 import type { WorkingHoursPreset } from './WorkingHoursPreset';
 import {
     WorkingHoursPresetFromJSON,
@@ -23,42 +29,49 @@ import {
 /**
  * 
  * @export
- * @interface Driver
+ * @interface DriverBody
  */
-export interface Driver {
+export interface DriverBody {
     /**
      * 
      * @type {WorkingHoursPreset}
-     * @memberof Driver
+     * @memberof DriverBody
      */
     workingHoursPreset: WorkingHoursPreset | null;
+    /**
+     * 
+     * @type {WorkLogbook}
+     * @memberof DriverBody
+     */
+    workLogbook?: WorkLogbook;
 }
 
 /**
- * Check if a given object implements the Driver interface.
+ * Check if a given object implements the DriverBody interface.
  */
-export function instanceOfDriver(value: object): boolean {
+export function instanceOfDriverBody(value: object): boolean {
     let isInstance = true;
     isInstance = isInstance && "workingHoursPreset" in value;
 
     return isInstance;
 }
 
-export function DriverFromJSON(json: any): Driver {
-    return DriverFromJSONTyped(json, false);
+export function DriverBodyFromJSON(json: any): DriverBody {
+    return DriverBodyFromJSONTyped(json, false);
 }
 
-export function DriverFromJSONTyped(json: any, ignoreDiscriminator: boolean): Driver {
+export function DriverBodyFromJSONTyped(json: any, ignoreDiscriminator: boolean): DriverBody {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         
         'workingHoursPreset': WorkingHoursPresetFromJSON(json['workingHoursPreset']),
+        'workLogbook': !exists(json, 'workLogbook') ? undefined : WorkLogbookFromJSON(json['workLogbook']),
     };
 }
 
-export function DriverToJSON(value?: Driver | null): any {
+export function DriverBodyToJSON(value?: DriverBody | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -68,6 +81,7 @@ export function DriverToJSON(value?: Driver | null): any {
     return {
         
         'workingHoursPreset': WorkingHoursPresetToJSON(value.workingHoursPreset),
+        'workLogbook': WorkLogbookToJSON(value.workLogbook),
     };
 }
 
