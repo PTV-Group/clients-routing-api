@@ -26,45 +26,38 @@ using OpenAPIDateConverter = PTV.Developer.Clients.routing.Client.OpenAPIDateCon
 namespace PTV.Developer.Clients.routing.Model
 {
     /// <summary>
-    /// Issued when the driver has to take a break or a rest, perform service or wait for a waypoint to open. Requires _SCHEDULE_EVENTS_ to be requested.
+    /// DriverBody
     /// </summary>
-    [DataContract(Name = "ScheduleEvent")]
-    public partial class ScheduleEvent : IEquatable<ScheduleEvent>, IValidatableObject
+    [DataContract(Name = "DriverBody")]
+    public partial class DriverBody : IEquatable<DriverBody>, IValidatableObject
     {
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="ScheduleEvent" /> class.
+        /// Gets or Sets WorkingHoursPreset
+        /// </summary>
+        [DataMember(Name = "workingHoursPreset", IsRequired = true, EmitDefaultValue = true)]
+        public WorkingHoursPreset WorkingHoursPreset { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DriverBody" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected ScheduleEvent() { }
+        protected DriverBody() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ScheduleEvent" /> class.
+        /// Initializes a new instance of the <see cref="DriverBody" /> class.
         /// </summary>
-        /// <param name="duration">The duration [s]. (required).</param>
-        /// <param name="scheduleTypes">Tells what happens at this position of the route.  (required).</param>
-        public ScheduleEvent(int duration = default(int), List<ScheduleType> scheduleTypes = default(List<ScheduleType>))
+        /// <param name="workingHoursPreset">workingHoursPreset (required).</param>
+        /// <param name="workLogbook">workLogbook.</param>
+        public DriverBody(WorkingHoursPreset workingHoursPreset = default(WorkingHoursPreset), WorkLogbook workLogbook = default(WorkLogbook))
         {
-            this.Duration = duration;
-            // to ensure "scheduleTypes" is required (not null)
-            if (scheduleTypes == null)
-            {
-                throw new ArgumentNullException("scheduleTypes is a required property for ScheduleEvent and cannot be null");
-            }
-            this.ScheduleTypes = scheduleTypes;
+            this.WorkingHoursPreset = workingHoursPreset;
+            this.WorkLogbook = workLogbook;
         }
 
         /// <summary>
-        /// The duration [s].
+        /// Gets or Sets WorkLogbook
         /// </summary>
-        /// <value>The duration [s].</value>
-        [DataMember(Name = "duration", IsRequired = true, EmitDefaultValue = true)]
-        public int Duration { get; set; }
-
-        /// <summary>
-        /// Tells what happens at this position of the route. 
-        /// </summary>
-        /// <value>Tells what happens at this position of the route. </value>
-        [DataMember(Name = "scheduleTypes", IsRequired = true, EmitDefaultValue = true)]
-        public List<ScheduleType> ScheduleTypes { get; set; }
+        [DataMember(Name = "workLogbook", EmitDefaultValue = false)]
+        public WorkLogbook WorkLogbook { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -73,9 +66,9 @@ namespace PTV.Developer.Clients.routing.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class ScheduleEvent {\n");
-            sb.Append("  Duration: ").Append(Duration).Append("\n");
-            sb.Append("  ScheduleTypes: ").Append(ScheduleTypes).Append("\n");
+            sb.Append("class DriverBody {\n");
+            sb.Append("  WorkingHoursPreset: ").Append(WorkingHoursPreset).Append("\n");
+            sb.Append("  WorkLogbook: ").Append(WorkLogbook).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,15 +89,15 @@ namespace PTV.Developer.Clients.routing.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ScheduleEvent);
+            return this.Equals(input as DriverBody);
         }
 
         /// <summary>
-        /// Returns true if ScheduleEvent instances are equal
+        /// Returns true if DriverBody instances are equal
         /// </summary>
-        /// <param name="input">Instance of ScheduleEvent to be compared</param>
+        /// <param name="input">Instance of DriverBody to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ScheduleEvent input)
+        public bool Equals(DriverBody input)
         {
             if (input == null)
             {
@@ -112,14 +105,13 @@ namespace PTV.Developer.Clients.routing.Model
             }
             return 
                 (
-                    this.Duration == input.Duration ||
-                    this.Duration.Equals(input.Duration)
+                    this.WorkingHoursPreset == input.WorkingHoursPreset ||
+                    this.WorkingHoursPreset.Equals(input.WorkingHoursPreset)
                 ) && 
                 (
-                    this.ScheduleTypes == input.ScheduleTypes ||
-                    this.ScheduleTypes != null &&
-                    input.ScheduleTypes != null &&
-                    this.ScheduleTypes.SequenceEqual(input.ScheduleTypes)
+                    this.WorkLogbook == input.WorkLogbook ||
+                    (this.WorkLogbook != null &&
+                    this.WorkLogbook.Equals(input.WorkLogbook))
                 );
         }
 
@@ -132,10 +124,10 @@ namespace PTV.Developer.Clients.routing.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Duration.GetHashCode();
-                if (this.ScheduleTypes != null)
+                hashCode = (hashCode * 59) + this.WorkingHoursPreset.GetHashCode();
+                if (this.WorkLogbook != null)
                 {
-                    hashCode = (hashCode * 59) + this.ScheduleTypes.GetHashCode();
+                    hashCode = (hashCode * 59) + this.WorkLogbook.GetHashCode();
                 }
                 return hashCode;
             }
@@ -148,12 +140,6 @@ namespace PTV.Developer.Clients.routing.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
-            // Duration (int) minimum
-            if (this.Duration < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Duration, must be a value greater than or equal to 0.", new [] { "Duration" });
-            }
-
             yield break;
         }
     }

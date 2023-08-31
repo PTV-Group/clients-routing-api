@@ -26,18 +26,18 @@ using OpenAPIDateConverter = PTV.Developer.Clients.routing.Client.OpenAPIDateCon
 namespace PTV.Developer.Clients.routing.Model
 {
     /// <summary>
-    /// Emissions according to the draft version of ISO 14083:2023.
+    /// Emissions according to ISO 14083:2023 (a.k.a. ISO standard).
     /// </summary>
-    [DataContract(Name = "Emissions_ISO14083_2022")]
-    public partial class EmissionsISO140832022 : IEquatable<EmissionsISO140832022>, IValidatableObject
+    [DataContract(Name = "Emissions_ISO14083_2023")]
+    public partial class EmissionsISO140832023 : IEquatable<EmissionsISO140832023>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmissionsISO140832022" /> class.
+        /// Initializes a new instance of the <see cref="EmissionsISO140832023" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected EmissionsISO140832022() { }
+        protected EmissionsISO140832023() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmissionsISO140832022" /> class.
+        /// Initializes a new instance of the <see cref="EmissionsISO140832023" /> class.
         /// </summary>
         /// <param name="fuelConsumption">The total conventional fuel consumption [kg]. (required).</param>
         /// <param name="electricityConsumption">The total electric power consumption of the vehicle if the **engineType** is _ELECTRIC_ or _HYBRID_ [kWh]. (required).</param>
@@ -45,7 +45,7 @@ namespace PTV.Developer.Clients.routing.Model
         /// <param name="co2eWellToWheel">The amount of emitted CO2e from well to wheel [kg]. (required).</param>
         /// <param name="energyUseTankToWheel">The tank-to-wheel energy use [MJ]. (required).</param>
         /// <param name="energyUseWellToWheel">The well-to-wheel energy use [MJ]. (required).</param>
-        public EmissionsISO140832022(double fuelConsumption = default(double), double electricityConsumption = default(double), double co2eTankToWheel = default(double), double co2eWellToWheel = default(double), double energyUseTankToWheel = default(double), double energyUseWellToWheel = default(double))
+        public EmissionsISO140832023(double fuelConsumption = default(double), double electricityConsumption = default(double), double co2eTankToWheel = default(double), double co2eWellToWheel = default(double), double energyUseTankToWheel = default(double), double energyUseWellToWheel = default(double))
         {
             this.FuelConsumption = fuelConsumption;
             this.ElectricityConsumption = electricityConsumption;
@@ -104,7 +104,7 @@ namespace PTV.Developer.Clients.routing.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class EmissionsISO140832022 {\n");
+            sb.Append("class EmissionsISO140832023 {\n");
             sb.Append("  FuelConsumption: ").Append(FuelConsumption).Append("\n");
             sb.Append("  ElectricityConsumption: ").Append(ElectricityConsumption).Append("\n");
             sb.Append("  Co2eTankToWheel: ").Append(Co2eTankToWheel).Append("\n");
@@ -131,15 +131,15 @@ namespace PTV.Developer.Clients.routing.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as EmissionsISO140832022);
+            return this.Equals(input as EmissionsISO140832023);
         }
 
         /// <summary>
-        /// Returns true if EmissionsISO140832022 instances are equal
+        /// Returns true if EmissionsISO140832023 instances are equal
         /// </summary>
-        /// <param name="input">Instance of EmissionsISO140832022 to be compared</param>
+        /// <param name="input">Instance of EmissionsISO140832023 to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EmissionsISO140832022 input)
+        public bool Equals(EmissionsISO140832023 input)
         {
             if (input == null)
             {
