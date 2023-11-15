@@ -28,37 +28,37 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 /**
- * Name and number of the road ahead.
+ * The vehicle position if it is at a waypoint. This parameter is mutually exclusive with **position**.
  */
-@ApiModel(description = "Name and number of the road ahead.")
+@ApiModel(description = "The vehicle position if it is at a waypoint. This parameter is mutually exclusive with **position**.")
 @JsonPropertyOrder({
-  RoadAhead.JSON_PROPERTY_NAME,
-  RoadAhead.JSON_PROPERTY_NUMBER
+  PositionAtWaypoint.JSON_PROPERTY_NAME,
+  PositionAtWaypoint.JSON_PROPERTY_PERFORMED_SERVICE_TIME
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-15T14:25:12.435885Z[Etc/UTC]")
-public class RoadAhead {
+public class PositionAtWaypoint {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String JSON_PROPERTY_NUMBER = "number";
-  private String number;
+  public static final String JSON_PROPERTY_PERFORMED_SERVICE_TIME = "performedServiceTime";
+  private Integer performedServiceTime = 0;
 
-  public RoadAhead() { 
+  public PositionAtWaypoint() { 
   }
 
-  public RoadAhead name(String name) {
+  public PositionAtWaypoint name(String name) {
     this.name = name;
     return this;
   }
 
    /**
-   * The name of the road. It does not depend on the selected language, instead it is presented as it can be found on local signs.
+   * The name of the waypoint.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the road. It does not depend on the selected language, instead it is presented as it can be found on local signs.")
+  @ApiModelProperty(required = true, value = "The name of the waypoint.")
   @JsonProperty(JSON_PROPERTY_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getName() {
     return name;
@@ -66,40 +66,41 @@ public class RoadAhead {
 
 
   @JsonProperty(JSON_PROPERTY_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setName(String name) {
     this.name = name;
   }
 
 
-  public RoadAhead number(String number) {
-    this.number = number;
+  public PositionAtWaypoint performedServiceTime(Integer performedServiceTime) {
+    this.performedServiceTime = performedServiceTime;
     return this;
   }
 
    /**
-   * The number of the road which may consist of several numbers separated by \&quot;/\&quot;.
-   * @return number
+   * The service time [s] which has already been performed.
+   * minimum: 0
+   * @return performedServiceTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The number of the road which may consist of several numbers separated by \"/\".")
-  @JsonProperty(JSON_PROPERTY_NUMBER)
+  @ApiModelProperty(value = "The service time [s] which has already been performed.")
+  @JsonProperty(JSON_PROPERTY_PERFORMED_SERVICE_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public String getNumber() {
-    return number;
+  public Integer getPerformedServiceTime() {
+    return performedServiceTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER)
+  @JsonProperty(JSON_PROPERTY_PERFORMED_SERVICE_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumber(String number) {
-    this.number = number;
+  public void setPerformedServiceTime(Integer performedServiceTime) {
+    this.performedServiceTime = performedServiceTime;
   }
 
 
   /**
-   * Return true if this RoadAhead object is equal to o.
+   * Return true if this PositionAtWaypoint object is equal to o.
    */
   @Override
   public boolean equals(Object o) {
@@ -109,22 +110,22 @@ public class RoadAhead {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RoadAhead roadAhead = (RoadAhead) o;
-    return Objects.equals(this.name, roadAhead.name) &&
-        Objects.equals(this.number, roadAhead.number);
+    PositionAtWaypoint positionAtWaypoint = (PositionAtWaypoint) o;
+    return Objects.equals(this.name, positionAtWaypoint.name) &&
+        Objects.equals(this.performedServiceTime, positionAtWaypoint.performedServiceTime);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, number);
+    return Objects.hash(name, performedServiceTime);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RoadAhead {\n");
+    sb.append("class PositionAtWaypoint {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    number: ").append(toIndentedString(number)).append("\n");
+    sb.append("    performedServiceTime: ").append(toIndentedString(performedServiceTime)).append("\n");
     sb.append("}");
     return sb.toString();
   }
