@@ -26,38 +26,47 @@ using OpenAPIDateConverter = PTV.Developer.Clients.routing.Client.OpenAPIDateCon
 namespace PTV.Developer.Clients.routing.Model
 {
     /// <summary>
-    /// The result of the reachable areas calculation.
+    /// The response of an ETA calculation.
     /// </summary>
-    [DataContract(Name = "ReachableAreas")]
-    public partial class ReachableAreas : IEquatable<ReachableAreas>, IValidatableObject
+    [DataContract(Name = "EtaResponse")]
+    public partial class EtaResponse : IEquatable<EtaResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ReachableAreas" /> class.
+        /// Initializes a new instance of the <see cref="EtaResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected ReachableAreas() { }
+        protected EtaResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ReachableAreas" /> class.
+        /// Initializes a new instance of the <see cref="EtaResponse" /> class.
         /// </summary>
-        /// <param name="polygons">The list of polygons calculated for the specified horizons in GeoJson format. For each horizon there is a separate polygon at the same index. (required).</param>
+        /// <param name="remainingWaypoints">The ETA and the remaining distance and travel time to the waypoints not yet reached by the route. (required).</param>
+        /// <param name="routeId">If the route has been recalculated, this is the ID of the new route. That will happen when it is likely that the vehicle has left the route, so the vehicle position is too far away from the route, or when the estimated time of arrival at the last waypoint is delayed in a way that another route may result in arriving earlier..</param>
         /// <param name="warnings">A list of warnings concerning the validity of the result..</param>
-        public ReachableAreas(List<string> polygons = default(List<string>), List<Warning> warnings = default(List<Warning>))
+        public EtaResponse(List<RemainingWaypoint> remainingWaypoints = default(List<RemainingWaypoint>), Guid routeId = default(Guid), List<Warning> warnings = default(List<Warning>))
         {
-            // to ensure "polygons" is required (not null)
-            if (polygons == null)
+            // to ensure "remainingWaypoints" is required (not null)
+            if (remainingWaypoints == null)
             {
-                throw new ArgumentNullException("polygons is a required property for ReachableAreas and cannot be null");
+                throw new ArgumentNullException("remainingWaypoints is a required property for EtaResponse and cannot be null");
             }
-            this.Polygons = polygons;
+            this.RemainingWaypoints = remainingWaypoints;
+            this.RouteId = routeId;
             this.Warnings = warnings;
         }
 
         /// <summary>
-        /// The list of polygons calculated for the specified horizons in GeoJson format. For each horizon there is a separate polygon at the same index.
+        /// The ETA and the remaining distance and travel time to the waypoints not yet reached by the route.
         /// </summary>
-        /// <value>The list of polygons calculated for the specified horizons in GeoJson format. For each horizon there is a separate polygon at the same index.</value>
-        [DataMember(Name = "polygons", IsRequired = true, EmitDefaultValue = true)]
-        public List<string> Polygons { get; set; }
+        /// <value>The ETA and the remaining distance and travel time to the waypoints not yet reached by the route.</value>
+        [DataMember(Name = "remainingWaypoints", IsRequired = true, EmitDefaultValue = true)]
+        public List<RemainingWaypoint> RemainingWaypoints { get; set; }
+
+        /// <summary>
+        /// If the route has been recalculated, this is the ID of the new route. That will happen when it is likely that the vehicle has left the route, so the vehicle position is too far away from the route, or when the estimated time of arrival at the last waypoint is delayed in a way that another route may result in arriving earlier.
+        /// </summary>
+        /// <value>If the route has been recalculated, this is the ID of the new route. That will happen when it is likely that the vehicle has left the route, so the vehicle position is too far away from the route, or when the estimated time of arrival at the last waypoint is delayed in a way that another route may result in arriving earlier.</value>
+        [DataMember(Name = "routeId", EmitDefaultValue = false)]
+        public Guid RouteId { get; set; }
 
         /// <summary>
         /// A list of warnings concerning the validity of the result.
@@ -73,8 +82,9 @@ namespace PTV.Developer.Clients.routing.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class ReachableAreas {\n");
-            sb.Append("  Polygons: ").Append(Polygons).Append("\n");
+            sb.Append("class EtaResponse {\n");
+            sb.Append("  RemainingWaypoints: ").Append(RemainingWaypoints).Append("\n");
+            sb.Append("  RouteId: ").Append(RouteId).Append("\n");
             sb.Append("  Warnings: ").Append(Warnings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -96,15 +106,15 @@ namespace PTV.Developer.Clients.routing.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ReachableAreas);
+            return this.Equals(input as EtaResponse);
         }
 
         /// <summary>
-        /// Returns true if ReachableAreas instances are equal
+        /// Returns true if EtaResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of ReachableAreas to be compared</param>
+        /// <param name="input">Instance of EtaResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ReachableAreas input)
+        public bool Equals(EtaResponse input)
         {
             if (input == null)
             {
@@ -112,10 +122,15 @@ namespace PTV.Developer.Clients.routing.Model
             }
             return 
                 (
-                    this.Polygons == input.Polygons ||
-                    this.Polygons != null &&
-                    input.Polygons != null &&
-                    this.Polygons.SequenceEqual(input.Polygons)
+                    this.RemainingWaypoints == input.RemainingWaypoints ||
+                    this.RemainingWaypoints != null &&
+                    input.RemainingWaypoints != null &&
+                    this.RemainingWaypoints.SequenceEqual(input.RemainingWaypoints)
+                ) && 
+                (
+                    this.RouteId == input.RouteId ||
+                    (this.RouteId != null &&
+                    this.RouteId.Equals(input.RouteId))
                 ) && 
                 (
                     this.Warnings == input.Warnings ||
@@ -134,9 +149,13 @@ namespace PTV.Developer.Clients.routing.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Polygons != null)
+                if (this.RemainingWaypoints != null)
                 {
-                    hashCode = (hashCode * 59) + this.Polygons.GetHashCode();
+                    hashCode = (hashCode * 59) + this.RemainingWaypoints.GetHashCode();
+                }
+                if (this.RouteId != null)
+                {
+                    hashCode = (hashCode * 59) + this.RouteId.GetHashCode();
                 }
                 if (this.Warnings != null)
                 {

@@ -26,38 +26,45 @@ using OpenAPIDateConverter = PTV.Developer.Clients.routing.Client.OpenAPIDateCon
 namespace PTV.Developer.Clients.routing.Model
 {
     /// <summary>
-    /// DriverBody
+    /// The vehicle position if it is at a waypoint. This parameter is mutually exclusive with **position**.
     /// </summary>
-    [DataContract(Name = "DriverBody")]
-    public partial class DriverBody : IEquatable<DriverBody>, IValidatableObject
+    [DataContract(Name = "PositionAtWaypoint")]
+    public partial class PositionAtWaypoint : IEquatable<PositionAtWaypoint>, IValidatableObject
     {
-
         /// <summary>
-        /// Gets or Sets WorkingHoursPreset
-        /// </summary>
-        [DataMember(Name = "workingHoursPreset", IsRequired = true, EmitDefaultValue = true)]
-        public WorkingHoursPreset WorkingHoursPreset { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DriverBody" /> class.
+        /// Initializes a new instance of the <see cref="PositionAtWaypoint" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected DriverBody() { }
+        protected PositionAtWaypoint() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="DriverBody" /> class.
+        /// Initializes a new instance of the <see cref="PositionAtWaypoint" /> class.
         /// </summary>
-        /// <param name="workingHoursPreset">workingHoursPreset (required).</param>
-        /// <param name="workLogbook">workLogbook.</param>
-        public DriverBody(WorkingHoursPreset workingHoursPreset = default(WorkingHoursPreset), WorkLogbook workLogbook = default(WorkLogbook))
+        /// <param name="name">The name of the waypoint. (required).</param>
+        /// <param name="performedServiceTime">The service time [s] which has already been performed. (default to 0).</param>
+        public PositionAtWaypoint(string name = default(string), int performedServiceTime = 0)
         {
-            this.WorkingHoursPreset = workingHoursPreset;
-            this.WorkLogbook = workLogbook;
+            // to ensure "name" is required (not null)
+            if (name == null)
+            {
+                throw new ArgumentNullException("name is a required property for PositionAtWaypoint and cannot be null");
+            }
+            this.Name = name;
+            this.PerformedServiceTime = performedServiceTime;
         }
 
         /// <summary>
-        /// Gets or Sets WorkLogbook
+        /// The name of the waypoint.
         /// </summary>
-        [DataMember(Name = "workLogbook", EmitDefaultValue = false)]
-        public WorkLogbook WorkLogbook { get; set; }
+        /// <value>The name of the waypoint.</value>
+        [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = true)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// The service time [s] which has already been performed.
+        /// </summary>
+        /// <value>The service time [s] which has already been performed.</value>
+        [DataMember(Name = "performedServiceTime", EmitDefaultValue = false)]
+        public int PerformedServiceTime { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,9 +73,9 @@ namespace PTV.Developer.Clients.routing.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class DriverBody {\n");
-            sb.Append("  WorkingHoursPreset: ").Append(WorkingHoursPreset).Append("\n");
-            sb.Append("  WorkLogbook: ").Append(WorkLogbook).Append("\n");
+            sb.Append("class PositionAtWaypoint {\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  PerformedServiceTime: ").Append(PerformedServiceTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,15 +96,15 @@ namespace PTV.Developer.Clients.routing.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as DriverBody);
+            return this.Equals(input as PositionAtWaypoint);
         }
 
         /// <summary>
-        /// Returns true if DriverBody instances are equal
+        /// Returns true if PositionAtWaypoint instances are equal
         /// </summary>
-        /// <param name="input">Instance of DriverBody to be compared</param>
+        /// <param name="input">Instance of PositionAtWaypoint to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DriverBody input)
+        public bool Equals(PositionAtWaypoint input)
         {
             if (input == null)
             {
@@ -105,13 +112,13 @@ namespace PTV.Developer.Clients.routing.Model
             }
             return 
                 (
-                    this.WorkingHoursPreset == input.WorkingHoursPreset ||
-                    this.WorkingHoursPreset.Equals(input.WorkingHoursPreset)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.WorkLogbook == input.WorkLogbook ||
-                    (this.WorkLogbook != null &&
-                    this.WorkLogbook.Equals(input.WorkLogbook))
+                    this.PerformedServiceTime == input.PerformedServiceTime ||
+                    this.PerformedServiceTime.Equals(input.PerformedServiceTime)
                 );
         }
 
@@ -124,11 +131,11 @@ namespace PTV.Developer.Clients.routing.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.WorkingHoursPreset.GetHashCode();
-                if (this.WorkLogbook != null)
+                if (this.Name != null)
                 {
-                    hashCode = (hashCode * 59) + this.WorkLogbook.GetHashCode();
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.PerformedServiceTime.GetHashCode();
                 return hashCode;
             }
         }
@@ -140,6 +147,12 @@ namespace PTV.Developer.Clients.routing.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+            // PerformedServiceTime (int) minimum
+            if (this.PerformedServiceTime < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PerformedServiceTime, must be a value greater than or equal to 0.", new [] { "PerformedServiceTime" });
+            }
+
             yield break;
         }
     }
