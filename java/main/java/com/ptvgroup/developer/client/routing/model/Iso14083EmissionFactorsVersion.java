@@ -26,31 +26,19 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * The fuel type of the vehicle. The fuel types _CNG_GASOLINE_ and _LNG_GASOLINE_ are used for dual-fuel vehicles, therefore the **dualFuelRatio** has to be specified. These fuel types cannot be used with hybrid vehicles.  Supported for **engineType** _COMBUSTION_ and _HYBRID_. Relevant for &#x60;emissions&#x60;. 
+ * Defines the version of the emission factors to use for emission calculation based on ISO 14083. Will be ignored for other calculation methods.
  */
-public enum FuelType {
+public enum Iso14083EmissionFactorsVersion {
   
-  GASOLINE("GASOLINE"),
+  INITIAL("INITIAL"),
   
-  DIESEL("DIESEL"),
+  VERSION_2("VERSION_2"),
   
-  COMPRESSED_NATURAL_GAS("COMPRESSED_NATURAL_GAS"),
-  
-  LIQUEFIED_PETROLEUM_GAS("LIQUEFIED_PETROLEUM_GAS"),
-  
-  LIQUEFIED_NATURAL_GAS("LIQUEFIED_NATURAL_GAS"),
-  
-  CNG_GASOLINE("CNG_GASOLINE"),
-  
-  LPG_GASOLINE("LPG_GASOLINE"),
-  
-  ETHANOL("ETHANOL"),
-  
-  NONE("NONE");
+  LATEST("LATEST");
 
   private String value;
 
-  FuelType(String value) {
+  Iso14083EmissionFactorsVersion(String value) {
     this.value = value;
   }
 
@@ -65,8 +53,8 @@ public enum FuelType {
   }
 
   @JsonCreator
-  public static FuelType fromValue(String value) {
-    for (FuelType b : FuelType.values()) {
+  public static Iso14083EmissionFactorsVersion fromValue(String value) {
+    for (Iso14083EmissionFactorsVersion b : Iso14083EmissionFactorsVersion.values()) {
       if (b.value.equals(value)) {
         return b;
       }

@@ -26,31 +26,19 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * The fuel type of the vehicle. The fuel types _CNG_GASOLINE_ and _LNG_GASOLINE_ are used for dual-fuel vehicles, therefore the **dualFuelRatio** has to be specified. These fuel types cannot be used with hybrid vehicles.  Supported for **engineType** _COMBUSTION_ and _HYBRID_. Relevant for &#x60;emissions&#x60;. 
+ * Gets or Sets EmissionCalculationMethod
  */
-public enum FuelType {
+public enum EmissionCalculationMethod {
   
-  GASOLINE("GASOLINE"),
+  EN16258_2012("EN16258_2012"),
   
-  DIESEL("DIESEL"),
+  ISO14083_2023("ISO14083_2023"),
   
-  COMPRESSED_NATURAL_GAS("COMPRESSED_NATURAL_GAS"),
-  
-  LIQUEFIED_PETROLEUM_GAS("LIQUEFIED_PETROLEUM_GAS"),
-  
-  LIQUEFIED_NATURAL_GAS("LIQUEFIED_NATURAL_GAS"),
-  
-  CNG_GASOLINE("CNG_GASOLINE"),
-  
-  LPG_GASOLINE("LPG_GASOLINE"),
-  
-  ETHANOL("ETHANOL"),
-  
-  NONE("NONE");
+  FRENCH_CO2E_DECREE_2017_639("FRENCH_CO2E_DECREE_2017_639");
 
   private String value;
 
-  FuelType(String value) {
+  EmissionCalculationMethod(String value) {
     this.value = value;
   }
 
@@ -65,13 +53,13 @@ public enum FuelType {
   }
 
   @JsonCreator
-  public static FuelType fromValue(String value) {
-    for (FuelType b : FuelType.values()) {
+  public static EmissionCalculationMethod fromValue(String value) {
+    for (EmissionCalculationMethod b : EmissionCalculationMethod.values()) {
       if (b.value.equals(value)) {
         return b;
       }
     }
-    return null;
+    throw new IllegalArgumentException("Unexpected value '" + value + "'");
   }
 
   /**
