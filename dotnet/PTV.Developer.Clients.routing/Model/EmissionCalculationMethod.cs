@@ -26,28 +26,28 @@ using OpenAPIDateConverter = PTV.Developer.Clients.routing.Client.OpenAPIDateCon
 namespace PTV.Developer.Clients.routing.Model
 {
     /// <summary>
-    /// Defines ScheduleViolationType
+    /// Defines EmissionCalculationMethod
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum ScheduleViolationType
+    public enum EmissionCalculationMethod
     {
         /// <summary>
-        /// Enum OPENING_INTERVAL for value: OPENING_INTERVAL
+        /// Enum EN16258_2012 for value: EN16258_2012
         /// </summary>
-        [EnumMember(Value = "OPENING_INTERVAL")]
-        OPENING_INTERVAL = 1,
+        [EnumMember(Value = "EN16258_2012")]
+        EN16258_2012 = 1,
 
         /// <summary>
-        /// Enum MAXIMUM_TRAVEL_TIME for value: MAXIMUM_TRAVEL_TIME
+        /// Enum ISO14083_2023 for value: ISO14083_2023
         /// </summary>
-        [EnumMember(Value = "MAXIMUM_TRAVEL_TIME")]
-        MAXIMUM_TRAVEL_TIME = 2,
+        [EnumMember(Value = "ISO14083_2023")]
+        ISO14083_2023 = 2,
 
         /// <summary>
-        /// Enum MAXIMUM_DRIVING_TIME for value: MAXIMUM_DRIVING_TIME
+        /// Enum FRENCH_CO2E_DECREE_2017_639 for value: FRENCH_CO2E_DECREE_2017_639
         /// </summary>
-        [EnumMember(Value = "MAXIMUM_DRIVING_TIME")]
-        MAXIMUM_DRIVING_TIME = 3
+        [EnumMember(Value = "FRENCH_CO2E_DECREE_2017_639")]
+        FRENCH_CO2E_DECREE_2017_639 = 3
     }
 
 }

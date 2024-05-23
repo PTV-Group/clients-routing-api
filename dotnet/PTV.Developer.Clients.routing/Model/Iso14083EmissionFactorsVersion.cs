@@ -26,28 +26,29 @@ using OpenAPIDateConverter = PTV.Developer.Clients.routing.Client.OpenAPIDateCon
 namespace PTV.Developer.Clients.routing.Model
 {
     /// <summary>
-    /// Defines ScheduleViolationType
+    /// Defines the version of the emission factors to use for emission calculation based on ISO 14083. Will be ignored for other calculation methods.
     /// </summary>
+    /// <value>Defines the version of the emission factors to use for emission calculation based on ISO 14083. Will be ignored for other calculation methods.</value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum ScheduleViolationType
+    public enum Iso14083EmissionFactorsVersion
     {
         /// <summary>
-        /// Enum OPENING_INTERVAL for value: OPENING_INTERVAL
+        /// Enum INITIAL for value: INITIAL
         /// </summary>
-        [EnumMember(Value = "OPENING_INTERVAL")]
-        OPENING_INTERVAL = 1,
+        [EnumMember(Value = "INITIAL")]
+        INITIAL = 1,
 
         /// <summary>
-        /// Enum MAXIMUM_TRAVEL_TIME for value: MAXIMUM_TRAVEL_TIME
+        /// Enum VERSION_2 for value: VERSION_2
         /// </summary>
-        [EnumMember(Value = "MAXIMUM_TRAVEL_TIME")]
-        MAXIMUM_TRAVEL_TIME = 2,
+        [EnumMember(Value = "VERSION_2")]
+        VERSION_2 = 2,
 
         /// <summary>
-        /// Enum MAXIMUM_DRIVING_TIME for value: MAXIMUM_DRIVING_TIME
+        /// Enum LATEST for value: LATEST
         /// </summary>
-        [EnumMember(Value = "MAXIMUM_DRIVING_TIME")]
-        MAXIMUM_DRIVING_TIME = 3
+        [EnumMember(Value = "LATEST")]
+        LATEST = 3
     }
 
 }
