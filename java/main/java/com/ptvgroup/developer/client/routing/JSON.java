@@ -2,6 +2,7 @@ package com.ptvgroup.developer.client.routing;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.json.JsonMapper;
 import org.openapitools.jackson.nullable.JsonNullableModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.ptvgroup.developer.client.routing.model.*;
@@ -12,21 +13,22 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-23T09:57:52.401871Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-08-12T07:36:30.278221337Z[Etc/UTC]", comments = "Generator version: 7.7.0")
 public class JSON {
   private ObjectMapper mapper;
 
   public JSON() {
-    mapper = new ObjectMapper();
-    mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-    mapper.configure(MapperFeature.ALLOW_COERCION_OF_SCALARS, false);
-    mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true);
-    mapper.configure(DeserializationFeature.FAIL_ON_INVALID_SUBTYPE, true);
-    mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
-    mapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
-    mapper.enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
-    mapper.setDateFormat(new RFC3339DateFormat());
-    mapper.registerModule(new JavaTimeModule());
+    mapper = JsonMapper.builder()
+        .serializationInclusion(JsonInclude.Include.NON_NULL)
+        .disable(MapperFeature.ALLOW_COERCION_OF_SCALARS)
+        .enable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
+        .enable(DeserializationFeature.FAIL_ON_INVALID_SUBTYPE)
+        .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
+        .enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING)
+        .enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING)
+        .defaultDateFormat(new RFC3339DateFormat())
+        .addModule(new JavaTimeModule())
+        .build();
     JsonNullableModule jnm = new JsonNullableModule();
     mapper.registerModule(jnm);
   }
@@ -67,6 +69,7 @@ public class JSON {
   /**
    * Helper class to register the discriminator mappings.
    */
+  @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-08-12T07:36:30.278221337Z[Etc/UTC]", comments = "Generator version: 7.7.0")
   private static class ClassDiscriminatorMapping {
     // The model class name.
     Class<?> modelClass;
