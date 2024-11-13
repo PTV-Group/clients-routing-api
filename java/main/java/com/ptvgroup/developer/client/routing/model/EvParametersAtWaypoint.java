@@ -39,7 +39,7 @@ import com.ptvgroup.developer.client.routing.ApiClient;
   EvParametersAtWaypoint.JSON_PROPERTY_CHARGING_STATION,
   EvParametersAtWaypoint.JSON_PROPERTY_POWER_CONSUMPTION_DURING_SERVICE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-12T08:24:21.642779946Z[Etc/UTC]", comments = "Generator version: 7.8.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-13T09:18:49.935887368Z[Etc/UTC]", comments = "Generator version: 7.8.0")
 public class EvParametersAtWaypoint {
   public static final String JSON_PROPERTY_WEATHER = "weather";
   private Weather weather;

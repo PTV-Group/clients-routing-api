@@ -37,7 +37,7 @@ import com.ptvgroup.developer.client.routing.ApiClient;
   EvStatusEvent.JSON_PROPERTY_ELECTRICITY_CONSUMPTION,
   EvStatusEvent.JSON_PROPERTY_POLYLINE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-12T08:24:21.642779946Z[Etc/UTC]", comments = "Generator version: 7.8.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-13T09:18:49.935887368Z[Etc/UTC]", comments = "Generator version: 7.8.0")
 public class EvStatusEvent {
   public static final String JSON_PROPERTY_BATTERY_STATE_OF_CHARGE = "batteryStateOfCharge";
   private Double batteryStateOfCharge;

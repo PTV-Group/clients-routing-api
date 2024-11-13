@@ -53,7 +53,7 @@ import com.ptvgroup.developer.client.routing.ApiClient;
   VehicleParametersAtWaypoint.JSON_PROPERTY_TUNNEL_RESTRICTION_CODE,
   VehicleParametersAtWaypoint.JSON_PROPERTY_TRUCK_ROUTES
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-12T08:24:21.642779946Z[Etc/UTC]", comments = "Generator version: 7.8.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-13T09:18:49.935887368Z[Etc/UTC]", comments = "Generator version: 7.8.0")
 public class VehicleParametersAtWaypoint {
   public static final String JSON_PROPERTY_AVERAGE_FUEL_CONSUMPTION = "averageFuelConsumption";
   private Double averageFuelConsumption;

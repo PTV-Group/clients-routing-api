@@ -43,7 +43,7 @@ import com.ptvgroup.developer.client.routing.ApiClient;
   TollSectionCost.JSON_PROPERTY_ETC_SUBSCRIPTIONS,
   TollSectionCost.JSON_PROPERTY_CONVERTED_PRICE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-12T08:24:21.642779946Z[Etc/UTC]", comments = "Generator version: 7.8.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-13T09:18:49.935887368Z[Etc/UTC]", comments = "Generator version: 7.8.0")
 public class TollSectionCost {
   public static final String JSON_PROPERTY_PRICE = "price";
   private Double price;

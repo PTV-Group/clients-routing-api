@@ -36,7 +36,7 @@ import com.ptvgroup.developer.client.routing.ApiClient;
   WaypointEvent.JSON_PROPERTY_INDEX,
   WaypointEvent.JSON_PROPERTY_NAME
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-12T08:24:21.642779946Z[Etc/UTC]", comments = "Generator version: 7.8.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-13T09:18:49.935887368Z[Etc/UTC]", comments = "Generator version: 7.8.0")
 public class WaypointEvent {
   public static final String JSON_PROPERTY_INDEX = "index";
   private Integer index;
