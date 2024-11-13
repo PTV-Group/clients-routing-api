@@ -460,7 +460,6 @@ namespace PTV.Developer.Clients.routing.Api
         public PTV.Developer.Clients.routing.Client.ApiResponse<RouteResponse> CalculateRouteWithHttpInfo(List<string>? waypoints = default(List<string>?), Guid? routeId = default(Guid?), string? profile = default(string?), Vehicle? vehicle = default(Vehicle?), Options? options = default(Options?), EmissionOptions? emissionOptions = default(EmissionOptions?), MonetaryCostOptions? monetaryCostOptions = default(MonetaryCostOptions?), List<Results>? results = default(List<Results>?), int operationIndex = 0)
         {
             PTV.Developer.Clients.routing.Client.RequestOptions localVarRequestOptions = new PTV.Developer.Clients.routing.Client.RequestOptions();
-			localVarRequestOptions.HeaderParameters.Add("User-Agent","ptv-generated csharp client");
 
             string[] _contentTypes = new string[] {
             };
@@ -786,7 +785,6 @@ namespace PTV.Developer.Clients.routing.Api
         {
 
             PTV.Developer.Clients.routing.Client.RequestOptions localVarRequestOptions = new PTV.Developer.Clients.routing.Client.RequestOptions();
-			localVarRequestOptions.HeaderParameters.Add("User-Agent","ptv-generated csharp client");
 
             string[] _contentTypes = new string[] {
             };
@@ -1118,7 +1116,6 @@ namespace PTV.Developer.Clients.routing.Api
             }
 
             PTV.Developer.Clients.routing.Client.RequestOptions localVarRequestOptions = new PTV.Developer.Clients.routing.Client.RequestOptions();
-			localVarRequestOptions.HeaderParameters.Add("User-Agent","ptv-generated csharp client");
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -1468,7 +1465,6 @@ namespace PTV.Developer.Clients.routing.Api
 
 
             PTV.Developer.Clients.routing.Client.RequestOptions localVarRequestOptions = new PTV.Developer.Clients.routing.Client.RequestOptions();
-			localVarRequestOptions.HeaderParameters.Add("User-Agent","ptv-generated csharp client");
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -1808,7 +1804,6 @@ namespace PTV.Developer.Clients.routing.Api
             }
 
             PTV.Developer.Clients.routing.Client.RequestOptions localVarRequestOptions = new PTV.Developer.Clients.routing.Client.RequestOptions();
-			localVarRequestOptions.HeaderParameters.Add("User-Agent","ptv-generated csharp client");
 
             string[] _contentTypes = new string[] {
             };
@@ -1956,7 +1951,6 @@ namespace PTV.Developer.Clients.routing.Api
 
 
             PTV.Developer.Clients.routing.Client.RequestOptions localVarRequestOptions = new PTV.Developer.Clients.routing.Client.RequestOptions();
-			localVarRequestOptions.HeaderParameters.Add("User-Agent","ptv-generated csharp client");
 
             string[] _contentTypes = new string[] {
             };
@@ -2094,7 +2088,6 @@ namespace PTV.Developer.Clients.routing.Api
             }
 
             PTV.Developer.Clients.routing.Client.RequestOptions localVarRequestOptions = new PTV.Developer.Clients.routing.Client.RequestOptions();
-			localVarRequestOptions.HeaderParameters.Add("User-Agent","ptv-generated csharp client");
 
             string[] _contentTypes = new string[] {
             };
@@ -2173,7 +2166,6 @@ namespace PTV.Developer.Clients.routing.Api
 
 
             PTV.Developer.Clients.routing.Client.RequestOptions localVarRequestOptions = new PTV.Developer.Clients.routing.Client.RequestOptions();
-			localVarRequestOptions.HeaderParameters.Add("User-Agent","ptv-generated csharp client");
 
             string[] _contentTypes = new string[] {
             };
