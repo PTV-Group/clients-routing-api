@@ -26,34 +26,23 @@ using OpenAPIDateConverter = PTV.Developer.Clients.routing.Client.OpenAPIDateCon
 namespace PTV.Developer.Clients.routing.Model
 {
     /// <summary>
-    /// Defines ScheduleType
+    /// Defines whether polylines should match the Raster Maps API or the Vector Maps API.  Not only the polyline itself, but also other results and parameters that use the polyline of the route may change slightly, e.g. emission related results and **matchSideOfStreet**.
     /// </summary>
+    /// <value>Defines whether polylines should match the Raster Maps API or the Vector Maps API.  Not only the polyline itself, but also other results and parameters that use the polyline of the route may change slightly, e.g. emission related results and **matchSideOfStreet**.</value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum ScheduleType
+    public enum PolylineMapType
     {
         /// <summary>
-        /// Enum BREAK for value: BREAK
+        /// Enum RASTER for value: RASTER
         /// </summary>
-        [EnumMember(Value = "BREAK")]
-        BREAK = 1,
+        [EnumMember(Value = "RASTER")]
+        RASTER = 1,
 
         /// <summary>
-        /// Enum DAILY_REST for value: DAILY_REST
+        /// Enum VECTOR for value: VECTOR
         /// </summary>
-        [EnumMember(Value = "DAILY_REST")]
-        DAILY_REST = 2,
-
-        /// <summary>
-        /// Enum WAITING for value: WAITING
-        /// </summary>
-        [EnumMember(Value = "WAITING")]
-        WAITING = 3,
-
-        /// <summary>
-        /// Enum SERVICE for value: SERVICE
-        /// </summary>
-        [EnumMember(Value = "SERVICE")]
-        SERVICE = 4
+        [EnumMember(Value = "VECTOR")]
+        VECTOR = 2
     }
 
 }
