@@ -59,6 +59,7 @@ export * from './Options';
 export * from './ParticleReductionClass';
 export * from './PaymentMethod';
 export * from './PolylineFormat';
+export * from './PolylineMapType';
 export * from './PositionAtWaypoint';
 export * from './PositionOnRoute';
 export * from './ReachableAreas';
