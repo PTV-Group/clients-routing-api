@@ -26,21 +26,17 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * Gets or Sets LowEmissionZoneTypes
+ * Defines whether polylines should match the Raster Maps API or the Vector Maps API.  Not only the polyline itself, but also other results and parameters that use the polyline of the route may change slightly, e.g. emission related results and **matchSideOfStreet**.
  */
-public enum LowEmissionZoneTypes {
+public enum PolylineMapType {
   
-  DE_GREEN("DE_GREEN"),
+  RASTER("RASTER"),
   
-  DE_YELLOW("DE_YELLOW"),
-  
-  DE_RED("DE_RED"),
-  
-  DE_NONE("DE_NONE");
+  VECTOR("VECTOR");
 
   private String value;
 
-  LowEmissionZoneTypes(String value) {
+  PolylineMapType(String value) {
     this.value = value;
   }
 
@@ -55,8 +51,8 @@ public enum LowEmissionZoneTypes {
   }
 
   @JsonCreator
-  public static LowEmissionZoneTypes fromValue(String value) {
-    for (LowEmissionZoneTypes b : LowEmissionZoneTypes.values()) {
+  public static PolylineMapType fromValue(String value) {
+    for (PolylineMapType b : PolylineMapType.values()) {
       if (b.value.equals(value)) {
         return b;
       }
